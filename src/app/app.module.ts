@@ -11,6 +11,7 @@ import { MessageService }       from './message.service';
 import { MessagesComponent }    from './messages/messages.component';
 
 import { AppRoutingModule }     from './app-routing.module';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { AppRoutingModule }     from './app-routing.module';
     DashboardComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    IndexComponent
   ],
   providers: [ HeroService, MessageService ],
   bootstrap: [ AppComponent ]
