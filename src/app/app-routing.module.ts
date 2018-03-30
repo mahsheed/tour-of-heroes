@@ -6,7 +6,10 @@ import { HeroesComponent }      from './heroes/heroes.component';
 import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
+// This is where all the routes are added
+
 const routes: Routes = [
+  //The first one that the path is empty is the default route
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
