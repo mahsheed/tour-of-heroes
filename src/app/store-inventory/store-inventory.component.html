@@ -1,10 +1,7 @@
-<div class="counter">
-    <button (click)="decrement()">
-      Decrement
-    </button>
-    <input type="text" [value]="count">
-    <button (click)="increment()">
-      Increment
-    </button>
-</div>
-<p>{{title}}</p>
+<body>
+
+    <button (click)="addItemToCart('black')" [disabled]="blkbtnDisabled" id="add-basket">{{blkBtnText}}</button><img src="assets/black.png" class="center" style="width:200px" alt="Image">
+    <button (click)="addItemToCart('green')" id="add-basket">Add to Basket</button><img src="assets/green.png" class="center" style="width:200px" alt="Image">
+    <button (click)="addItemToCart('purple')" id="add-basket">Add to Basket</button><img src="assets/purple.png" class="center" style="width:200px" alt="Image">
+    <button (click)="addItemToCart('brown')" id="add-basket">Add to Basket</button><img src="assets/brown.png" class="center" style="width:200px" alt="Image">
+</body>
