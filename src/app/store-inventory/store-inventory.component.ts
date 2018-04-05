@@ -11,5 +11,12 @@ export class StoreInventoryComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  title = 'Store Inventory1';
+  count: number = 0;
+  increment() {
+    this.count++;
+  }
+  decrement() {
+    this.count--;
+  }
 }
