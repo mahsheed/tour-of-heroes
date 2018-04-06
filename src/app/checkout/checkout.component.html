@@ -7,59 +7,53 @@
                     required
                     [(ngModel)]="model.name" name="name"
                     #name="ngModel">
+
             </div>
 
             <div class="form-group">
-                <label for="address">Address</label>
+                <label for="address">Address</label><p>{{AddSubmissionRes}}</p>
                 <input type="text" class="form-control" id="address" 
                     required
                     [(ngModel)]="model.address" name="address">
             </div>
 
             <div class="form-group">
-                <label for="citystatecountry">City, State, Country</label>
+                <label for="citystatecountry">City, State, Country</label><p>{{CitySubmissionRes}}</p>
                 <input type="text" class="form-control" id="citystatecountry" 
                     required
-                    [(ngModel)]="model.citystatecountry" name="citystatecountry">                
+                    [(ngModel)]="model.citystatecountry" name="citystatecountry">
             </div>
 
             <div class="form-group">
-                    <label for="zipcode">Zipcode</label>
-                    <input type="text" class="form-control" id="zipcode" 
-                       required
-                       [(ngModel)]="model.zipcode" name="zipcode">
+                <label for="zipcode">Zipcode</label><p>{{ZipSubmissionRes}}</p>
+                <input type="text" class="form-control" id="zipcode" 
+                    required
+                    [(ngModel)]="model.zipcode" name="zipcode">        
                </div>
 
             <div class="form-group">
-                <label for="phone">Phone</label>
+                <label for="phone">Phone</label><p>{{PhonSubmissionRes}}</p>
                 <input type="text" class="form-control" id="phone" 
                     required
                     [(ngModel)]="model.phone" name="phone">
             </div>
 
             <div class="form-group">
-                <label for="creditcard">Creditcard</label>
+                <label for="creditcard">Creditcard</label><p>{{CreditSubmissionRes}}</p>
                 <input type="text" class="form-control" id="creditcard" 
                     required
                     [(ngModel)]="model.creditcard" name="creditcard">
             </div>
 
             <div class="form-group">
-                <label for="exp">Expiration date</label>
+                <label for="exp">Expiration date</label><p>{{ExpSubmissionRes}}</p>
                 <input type="text" class="form-control" id="exp" 
                     required
-                    [(ngModel)]="model.exp" name="exp">
+                    [(ngModel)]="model.exp" name="exp">   
             </div>    
             <button type="submit" class="btn btn-success"
             (click)=onSubmit()>Submit</button>
         </form>
-        <p>{{AddSubmissionRes}}</p>
-        <br><p>{{PhonSubmissionRes}}</p>
-        <br><p>{{ZipSubmissionRes}}</p>
-        <br><p>{{PhonSubmissionRes}}</p>
-        <br><p>{{CitySubmissionRes}}</p>
-        <br><p>{{CreditSubmissionRes}}</p>
-        <br><p>{{ExpSubmissionRes}}</p>
-
-
+        
+        
 </div>

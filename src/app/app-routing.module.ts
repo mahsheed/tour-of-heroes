@@ -11,8 +11,8 @@ import { StoreInventoryComponent } from './store-inventory/store-inventory.compo
 
 const routes: Routes = [
   //The first one that the path is empty is the default route
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '/about', pathMatch: 'full' },
+  { path: 'about', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'heroes', component: HeroesComponent },
   { path: 'checkout', component: CheckoutComponent},

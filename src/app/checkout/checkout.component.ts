@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule }  from '@angular/platform-browser';
 import { Form } from '../form';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -40,27 +41,35 @@ export class CheckoutComponent {
     this.submitted = true;
     console.log(this.submitted);
     console.log(this.model.name);
+
     if (this.model.address.length > 20) {
-       this.AddSubmissionRes = "Error: the address length should be less than 20 characters";
+       this.AddSubmissionRes = "Error: The address length should be less than 20 characters";
+       this.submitted = false;
     }
     if (this.model.zipcode.length != 5) {
-      this.ZipSubmissionRes = "Error: zipcode must be exactly 5 characters";
+      this.ZipSubmissionRes = "Error: Zipcode must be exactly 5 characters";
+      this.submitted = false;
     }
     if (this.model.phone.length >= 12) {
-      this.PhonSubmissionRes = "Error: phone number must be no more than 12 characters";
+      this.PhonSubmissionRes = "Error: Phone number must be no more than 12 characters";
+      this.submitted = false;
     }
     if (this.model.citystatecountry.length < 10) {
       this.CitySubmissionRes = "Error: City, State, Country must be no less than 10 characters";
+      this.submitted = false;
     }
     if (this.model.creditcard.length != 16) {
       this.CreditSubmissionRes = "Error: Credit card must be exactly 16 characters";
+      this.submitted = false;
     }
     if (this.model.exp.length != 4) {
       this.ExpSubmissionRes = "Error: Credit card expiration must be written in MMYY format";
+      this.submitted = false;
+    }
+    if (this.submitted == true) {
+      confirm ("Are you sure you want to submit?");
+      window.alert ("This form was successfully submitted.");
+      window.location.href = "/about";
+      }
     }
   }
-  constructor() { }
-
-  // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
-}
