@@ -1,7 +1,19 @@
 <body>
 
-    <button (click)="addItemToCart('black')" [disabled]="blkbtnDisabled" id="add-basket">{{blkBtnText}}</button><img src="assets/black.png" class="center" style="width:200px" alt="Image">
-    <button (click)="addItemToCart('green')" id="add-basket">Add to Basket</button><img src="assets/green.png" class="center" style="width:200px" alt="Image">
-    <button (click)="addItemToCart('purple')" id="add-basket">Add to Basket</button><img src="assets/purple.png" class="center" style="width:200px" alt="Image">
-    <button (click)="addItemToCart('brown')" id="add-basket">Add to Basket</button><img src="assets/brown.png" class="center" style="width:200px" alt="Image">
-</body>
+    <img src="assets/black.png" class="center" style="width:200px" alt="Image">
+    <button (click)="addItemToCart('black')" [disabled]="blkbtnDisabled" id="add-basket">{{blkBtnText}}</button>
+    <button (click)="removeItemFromCart('black')" id="remove-basket">{{blkBtnText2}}</button>
+
+    <img src="assets/green.png" class="center" style="width:200px" alt="Image">
+    <button (click)="addItemToCart('green')" [disabled]="grnbtnDisabled" id="add-basket">{{grnBtnText}}</button>
+    <button (click)="removeItemFromCart('green')" id="remove-basket">{{grnBtnText2}}</button>
+
+    <img src="assets/purple.png" class="center" style="width:200px" alt="Image">
+    <button (click)="addItemToCart('purple')" [disabled]="prpbtnDisabled" id="add-basket">{{prpBtnText}}</button>
+    <button (click)="removeItemFromCart('purple')" id="remove-basket">{{prpBtnText2}}</button>
+
+    <img src="assets/brown.png" class="center" style="width:200px" alt="Image">
+    <button (click)="addItemToCart('brown')" [disabled]="brnbtnDisabled" id="add-basket">{{brnBtnText}}</button>
+    <button (click)="removeItemFromCart('brown')" id="remove-basket">{{brnBtnText2}}</button>
+
+  </body>

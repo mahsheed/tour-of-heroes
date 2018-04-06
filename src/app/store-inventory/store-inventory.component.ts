@@ -24,6 +24,17 @@ export class StoreInventoryComponent implements OnInit {
   brnQuantity = 2;
   blkbtnDisabled = false;
   blkBtnText = "Add to Basket";
+  blkBtnText2 = "Remove from Basket";
+  grnbtnDisabled = false;
+  grnBtnText = "Add to Basket";
+  grnBtnText2 = "Remove from Basket";
+  prpbtnDisabled = false;
+  prpBtnText = "Add to Basket";
+  prpBtnText2 = "Remove from Basket";
+  brnbtnDisabled = false;
+  brnBtnText = "Add to Basket";
+  brnBtnText2 = "Remove from Basket";
+  
   shoppingPrice;
 
   increment() {
@@ -47,16 +58,32 @@ export class StoreInventoryComponent implements OnInit {
     }
     else if (color == 'green') {
       this.grnQuantity = this.grnQuantity - 1;
+      if (this.grnQuantity == 0) {
+        this.grnbtnDisabled = true;
+        this.grnBtnText = "Out of Stock";
+      if (this.grnQuantity > 0) {
+        this.grnbtnDisabled = false;
+      }
+      }
       this.shoppingPrice = this.shoppingPrice + this.grnPrice;
     }
     else if (color == 'purple') {
       this.prpQuantity = this.prpQuantity - 1;
+      if (this.prpQuantity == 0) {
+        this.prpbtnDisabled = true;
+        this.prpBtnText = "Out of Stock";
+      }
       this.shoppingPrice = this.shoppingPrice + this.prpPrice;
     }
     else if (color == 'brown') {
       this.brnQuantity = this.brnQuantity - 1;
+      if (this.brnQuantity == 0) {
+        this.brnbtnDisabled = true;
+        this.brnBtnText = "Out of Stock";
+      }
       this.shoppingPrice = this.shoppingPrice + this.brnPrice;
     }
     console.log(this.shoppingPrice);
+    }
   }
-}
+  
