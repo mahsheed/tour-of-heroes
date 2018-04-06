@@ -13,7 +13,7 @@ export class Form {
     public name: string;
     public address: string;
     public citystatecountry: string;
-    public zipcode: number;
+    public zipcode: string;
     public phone: string;
     public creditcard: string;
     public exp: string;
