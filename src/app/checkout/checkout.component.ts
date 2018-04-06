@@ -18,7 +18,7 @@ import { Form }    from '../form';
 })
 
 export class CheckoutComponent {
-  model = new Form('Name', 'Address', 30062, 5555555555, 'City, State, Country',22,2);
+  model = new Form('', '', '', '', '', '', '');
   submitted = false;
   onSubmit() { this.submitted = true; }
   constructor() { }
