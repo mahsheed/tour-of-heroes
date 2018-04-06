@@ -2,7 +2,7 @@
 
     <img src="assets/black.png" class="center" style="width:200px" alt="Image"><br>
     <button (click)="addItemToCart('black')" [disabled]="blkbtnDisabled" id="add-basket">{{blkBtnText}}</button>
-    <button (click)="removeItemFromCart('black')" id="remove-basket">{{blkBtnText2}}</button><br>
+    <button (click)="removeItemFromCart('black')" [disabled]="blkbtnDisabled2" id="remove-basket">{{blkBtnText2}}</button><br>
 
     <img src="assets/green.png" class="center" style="width:200px" alt="Image"><br>
     <button (click)="addItemToCart('green')" [disabled]="grnbtnDisabled" id="add-basket">{{grnBtnText}}</button>
