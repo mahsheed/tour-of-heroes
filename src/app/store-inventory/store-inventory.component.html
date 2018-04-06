@@ -6,14 +6,15 @@
 
     <img src="assets/green.png" class="center" style="width:200px" alt="Image"><br>
     <button (click)="addItemToCart('green')" [disabled]="grnbtnDisabled" id="add-basket">{{grnBtnText}}</button>
-    <button (click)="removeItemFromCart('green')" id="remove-basket">{{grnBtnText2}}</button><br>
+    <button (click)="removeItemFromCart('green')" [disabled]="grnbtnDisabled2" id="remove-basket">{{grnBtnText2}}</button><br>
 
     <img src="assets/purple.png" class="center" style="width:200px" alt="Image"><br>
     <button (click)="addItemToCart('purple')" [disabled]="prpbtnDisabled" id="add-basket">{{prpBtnText}}</button>
-    <button (click)="removeItemFromCart('purple')" id="remove-basket">{{prpBtnText2}}</button><br>
+    <button (click)="removeItemFromCart('purple')" [disabled]="prpbtnDisabled2" id="remove-basket">{{prpBtnText2}}</button><br>
 
     <img src="assets/brown.png" class="center" style="width:200px" alt="Image"><br>
     <button (click)="addItemToCart('brown')" [disabled]="brnbtnDisabled" id="add-basket">{{brnBtnText}}</button>
-    <button (click)="removeItemFromCart('brown')" id="remove-basket">{{brnBtnText2}}</button><br>
-
+    <button (click)="removeItemFromCart('brown')" [disabled]="brnbtnDisabled2" id="remove-basket">{{brnBtnText2}}</button><br>
+    <p>Total cost: ${{shoppingPrice.toFixed(2)}} <br> 
+      Total number of items: {{cartBlkQuantity+cartGrnQuantity+cartPrpQuantity+cartBrnQuantity}}</p>
   </body>

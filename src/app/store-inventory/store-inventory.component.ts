@@ -51,15 +51,6 @@ export class StoreInventoryComponent implements OnInit {
   
   shoppingPrice;
 
-  increment() {
-    this.count++;
-    console.log('hello');
-
-  }
-  decrement() {
-    this.count--;
-    console.log('hello');
-  }
   removeItemFromCart(color) {
     console.log(color);
     if (color == 'black') {
