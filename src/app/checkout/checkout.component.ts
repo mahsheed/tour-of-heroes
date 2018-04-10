@@ -69,7 +69,7 @@ export class CheckoutComponent {
     if (this.submitted == true) {
       confirm ("Are you sure you want to submit?");
       window.alert ("This form was successfully submitted.");
-      window.location.href = "/about";
+      window.location.href = "/aboutpage";
       }
     }
   }
