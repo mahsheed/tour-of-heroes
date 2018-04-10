@@ -3,7 +3,6 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { AppComponent }         from './app.component';
 import { AboutpageComponent }   from './aboutpage/aboutpage.component';
-import { HeroService }          from './hero.service';
 import { MessageService }       from './message.service';
 import { MessagesComponent }    from './messages/messages.component';
 import { AppRoutingModule }     from './app-routing.module';
@@ -23,7 +22,7 @@ import { StoreInventoryComponent } from './store-inventory/store-inventory.compo
     CheckoutComponent,
     StoreInventoryComponent
   ],
-  providers: [ HeroService, MessageService ],
+  providers: [ MessageService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
