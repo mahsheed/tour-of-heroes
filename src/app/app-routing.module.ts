@@ -8,8 +8,8 @@ import { StoreInventoryComponent } from './store-inventory/store-inventory.compo
 
 const routes: Routes = [
   //The first one that the path is empty is the default route
-  { path: '', redirectTo: '/about', pathMatch: 'full' },
-  { path: 'about', component: AboutpageComponent },
+  { path: '', redirectTo: '/aboutpage', pathMatch: 'full' },
+  { path: 'aboutpage', component: AboutpageComponent },
   { path: 'checkout', component: CheckoutComponent},
   { path: 'store-inventory', component: StoreInventoryComponent}
 ];
