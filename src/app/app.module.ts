@@ -3,7 +3,6 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { AppComponent }         from './app.component';
 import { AboutpageComponent }   from './aboutpage/aboutpage.component';
-import { HeroesComponent }      from './heroes/heroes.component';
 import { HeroService }          from './hero.service';
 import { MessageService }       from './message.service';
 import { MessagesComponent }    from './messages/messages.component';
@@ -20,7 +19,6 @@ import { StoreInventoryComponent } from './store-inventory/store-inventory.compo
   declarations: [
     AppComponent,
     AboutpageComponent,
-    HeroesComponent,
     MessagesComponent,
     CheckoutComponent,
     StoreInventoryComponent
