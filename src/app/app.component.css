@@ -53,6 +53,7 @@ header, footer {
   text-align: center;
   font-size: 2rem;
   background-color: coral;
+  align-items: center;
 }
 
 .main {
@@ -74,7 +75,7 @@ aside {
 }
 
 .content {
-  background-color: orange;
+  background-color: rgb(255, 255, 255);
   padding: 1em;
 }
 
