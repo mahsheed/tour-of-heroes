@@ -22,6 +22,7 @@
       <button (click)="removeItemFromCart('brown')" [disabled]="brnbtnDisabled2" id="remove-basket">{{brnBtnText2}}</button><br> 
     </div>
   </div>
-    <p>Total cost: ${{shoppingPrice.toFixed(2)}} <br> 
+    <p>Your basket<br>
+      Total cost: ${{shoppingPrice.toFixed(2)}} <br> 
       Total number of items: {{cartBlkQuantity+cartGrnQuantity+cartPrpQuantity+cartBrnQuantity}}</p>
   </body>

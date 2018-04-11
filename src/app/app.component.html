@@ -1,7 +1,24 @@
-<h4>{{title}}</h4>
-<nav>
-  <a routerLink="/aboutpage">About</a>
-  <a routerLink="/store-inventory">Store Inventory</a>
-  <a routerLink="/checkout">Checkout</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="example">
+  <header>
+    <h4>{{title}}</h4>
+  </header>
+  <main class="main">
+    <nav>
+        <a routerLink="/aboutpage">About</a><br>
+        <a routerLink="/store-inventory">Store Inventory</a><br>
+        <a routerLink="/checkout">Checkout</a>
+      </nav>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    <aside>
+      aside content here
+    </aside>
+  </main>
+  <br>
+  <footer>
+    footer content here
+  </footer>
+</div>
+
+
