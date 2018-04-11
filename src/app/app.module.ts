@@ -6,12 +6,16 @@ import { AboutpageComponent }   from './aboutpage/aboutpage.component';
 import { AppRoutingModule }     from './app-routing.module';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { StoreInventoryComponent } from './store-inventory/store-inventory.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule
   ],
   declarations: [
     AppComponent,
