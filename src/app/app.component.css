@@ -40,13 +40,6 @@ body {
   line-height: 1.5;
 }
 
-.example {
-  width: 100%;
-  max-width: 1200px;
-  height: 700px;
-  margin: 0 auto;
-}
-
 header, footer {
   width: 100%;
   padding: 1em;
@@ -56,7 +49,7 @@ header, footer {
 }
 
 .main {
-  display: flex;
+  display: flex; /*establishes this is flex container*/
   height: 100%; /*setting this explicitly is important*/
   font-size: 2rem;
   flex-direction: column;
@@ -79,6 +72,9 @@ aside {
   padding: 1em;
 }
 
+main {
+  flex: 1 0 auto; /*fill the available space*/
+}
 footer {
-  align-self: flex-end;
+  flex: 0 0 90px; /*don't grow or shrink - just stay at a height of 90px.*/
 }

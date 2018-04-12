@@ -1,23 +1,21 @@
-<div class="example">
+<main class="main">
   <header>
-    <h4>{{title}}</h4>
+    <h4>{{title}} item 1, title </h4>
   </header>
-  <main class="main">
-    <nav>
-        <a routerLink="/aboutpage">About</a><br>
-        <a routerLink="/store-inventory">Store Inventory</a><br>
-        <a routerLink="/checkout">Checkout</a>
-      </nav>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
-    <aside>
-      aside content here
-    </aside>
-  </main>
+  <nav>item 2, navigation
+    <a routerLink="/aboutpage">About</a><br>
+    <a routerLink="/store-inventory">Store Inventory</a><br>
+    <a routerLink="/checkout">Checkout</a>
+  </nav>
+  <div class="content">
+    <router-outlet>item 3a, main content</router-outlet>
+  </div>
+  <aside>
+      item 3b, aside/shopping basket
+  </aside>
   <footer>
-    footer content here
+      item 4, footer
   </footer>
-</div>
+</main>
 
 
