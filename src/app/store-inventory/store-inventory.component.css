@@ -6,12 +6,12 @@
     flex: 1 0 auto; /*fill the available space, the code is equal to setting the 3 properties: flex-grow: 1; flex-shrink: 0; flex-basis: auto*/
   }
 
-.container {
+li {
     flex: 0 0 30px; /*do not grow or shrink. Stay fixed at 30px*/ 
     display: flex; /*Now a flex-container too*/
     flex-direction: column; /*stack icons vertically*/
     /*since direction is changed, this works on the vertical direction*/
-    justify-content: space-around;   
-    align-items: center; /*direction is changed! This affects the horizontal direction. Places Icons in the center*/
+    justify-content: space-between;   
+    align-items: flex-start; /*direction is changed! This affects the horizontal direction. Places Icons in the center*/
     background-color: #f2f2f2; /*make me pretty*/
 }
