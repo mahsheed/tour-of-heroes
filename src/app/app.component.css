@@ -53,6 +53,7 @@ header, footer {
   height: 100%; /*setting this explicitly is important*/
   font-size: 2rem;
   flex-direction: column;
+  flex: 1 0 auto; /*fill the available space, the code is equal to setting the 3 properties: flex-grow: 1; flex-shrink: 0; flex-basis: auto*/
 }
 
 nav, aside {
@@ -68,13 +69,14 @@ aside {
 }
 
 .content {
+  flex: 1 0 auto;
+  display: flex;
   background-color: rgb(255, 255, 255);
-  padding: 1em;
+  flex-direction: row;
 }
 
 main {
-  flex: 1 0 auto; /*fill the available space*/
 }
 footer {
-  flex: 0 0 90px; /*don't grow or shrink - just stay at a height of 90px.*/
+  flex: 0 0 90px; /*don't grow or shrink - just stay at a height of 90px. GrowShrinkBasis; GSB*/
 }
