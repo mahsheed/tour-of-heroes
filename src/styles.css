@@ -5,7 +5,7 @@ h1 {
   color: rgb(55, 39, 61);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 250%;
-  text-align: center
+  text-align: left;
 }
 h2, h3 {
   color: #444;
