@@ -2,18 +2,18 @@
   <header>
     <h4>{{title}} item 1, title </h4>
   </header>
-  <nav>item 2, navigation
+  <nav class="nav">item 2, navigation
     <a routerLink="/aboutpage">About</a><br>
     <a routerLink="/store-inventory">Store Inventory</a><br>
     <a routerLink="/checkout">Checkout</a>
   </nav>
   <main class="content">
-    <router-outlet>
-      item 3a, main content
-    </router-outlet>
     <aside>
       item 3b, aside/shopping basket
     </aside>
+    <router-outlet>
+      item 3a, main content
+    </router-outlet>
   </main>
   <footer>
       item 4, footer

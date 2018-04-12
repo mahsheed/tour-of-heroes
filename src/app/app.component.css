@@ -56,6 +56,19 @@ header, footer {
   flex: 1 0 auto; /*fill the available space, the code is equal to setting the 3 properties: flex-grow: 1; flex-shrink: 0; flex-basis: auto*/
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
 nav, aside {
   padding: 1em;
 }
@@ -66,17 +79,15 @@ nav {
 
 aside {
   background-color: lightgreen;
+  flex: 0 0 50px; /*do not grow or shrink. Stay fixed at 40px*/ 
+  display: flex; /*Now a flex-container too*/
+  flex-direction: column; /*stack icons vertically*/
+  /*since direction is changed, this works on the vertical direction*/
+  justify-content: space-around;   
+  align-items: center; /*direction is changed! This affects the horizontal direction. Places Icons in the center*/
+  background-color: #f2f2f2; /*make me pretty*/
 }
 
-.content {
-  flex: 1 0 auto;
-  display: flex;
-  background-color: rgb(255, 255, 255);
-  flex-direction: row;
-}
-
-main {
-}
 footer {
-  flex: 0 0 90px; /*don't grow or shrink - just stay at a height of 90px. GrowShrinkBasis; GSB*/
+  flex: 0 0 20px; /*don't grow or shrink - just stay at a height of 90px. GrowShrinkBasis; GSB*/
 }

@@ -1,5 +1,6 @@
 <body>
   <h1>Store Inventory</h1>
+  <main class=inventory>
   <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" fxLayoutAlign="space-evenly start">
     <div fxFlex="20%">
       <img src="assets/black.png" style="width:200px" alt="Black Mascara">Black Mascara<br>${{blkPrice}}<br>Quantity available: {{this.blkQuantity}}<br>
@@ -22,6 +23,7 @@
       <button (click)="removeItemFromCart('brown')" [disabled]="brnbtnDisabled2" id="remove-basket">{{brnBtnText2}}</button><br> 
     </div>
   </div>
+  </main>
     <p>Your basket<br>
       Total cost: ${{shoppingPrice.toFixed(2)}} <br> 
       Total number of items: {{cartBlkQuantity+cartGrnQuantity+cartPrpQuantity+cartBrnQuantity}}</p>
