@@ -59,20 +59,22 @@ export class CheckoutComponent {
       this.CitySubmissionRes = "Error: City, State, Country must be no less than 10 characters";
       this.submitted = false;
     }
-    if (this.model.creditcard.length !== 16 || this.model.creditcard.match(/^[0-9]+$/) === null) {
-      var err = this.model.creditcard.match(/^[0-9]+$/) + "Error: Credit card must be exactly 16 digits";
-      this.CreditSubmissionRes = err;
+    if (this.model.creditcard.match(/^\d{16}$/) === null) {
+      this.CreditSubmissionRes = "Error: Credit card must be exactly 16 digits";
       this.submitted = false;
     }
-    if (this.model.creditcard )
-    if (this.model.exp.length != 4) {
-      this.ExpSubmissionRes = "Error: Credit card expiration must be written in MMYY format";
+    if (this.model.exp.match(/^(0[1-9]|1[0-2])\/\d{2}$/) === null) {
+      this.ExpSubmissionRes = "Error: Credit card expiration must be written in MM/YY format";
       this.submitted = false;
     }
     if (this.submitted == true) {
-      confirm ("Are you sure you want to submit?");
-      window.alert ("This form was successfully submitted.");
-      window.location.href = "/aboutpage";
+      if (confirm ("Are you sure you want to submit?")) {
+        window.alert ("This form was successfully submitted.");
+        window.location.href = "/aboutpage";
+      }
+      else {
+        window.alert ("Submission was cancelled.");
       }
     }
   }
+}
