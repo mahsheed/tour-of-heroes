@@ -36,6 +36,7 @@ export class CheckoutComponent {
     this.CreditSubmissionRes = "";
     this.ExpSubmissionRes = "";
   }
+  
   onSubmit() {
     this.resetSubmissionValues();
     this.submitted = true;
@@ -58,15 +59,15 @@ export class CheckoutComponent {
       this.CitySubmissionRes = "Error: City, State, Country must be no less than 10 characters";
       this.submitted = false;
     }
-    if (this.model.creditcard.length != 16) {
-      this.CreditSubmissionRes = "Error: Credit card must be exactly 16 characters";
+    if (this.model.creditcard.length !== 16 || this.model.creditcard.match(/^[0-9]+$/) === null) {
+      var err = this.model.creditcard.match(/^[0-9]+$/) + "Error: Credit card must be exactly 16 digits";
+      this.CreditSubmissionRes = err;
       this.submitted = false;
     }
+    if (this.model.creditcard )
     if (this.model.exp.length != 4) {
       this.ExpSubmissionRes = "Error: Credit card expiration must be written in MMYY format";
       this.submitted = false;
-    if (this.model.expz)
-    
     }
     if (this.submitted == true) {
       confirm ("Are you sure you want to submit?");
