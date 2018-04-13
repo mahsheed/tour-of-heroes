@@ -2,7 +2,7 @@ h4 {
   font-size: 4em;
   color: rgb(112, 96, 139);
   margin-bottom: 0;
-  text-align: left;
+  text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 nav a {
@@ -12,6 +12,8 @@ nav a {
   display: inline-block;
   background-color: #eee;
   border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 nav a:visited, a:link {
   color: rgb(112, 96, 139);
@@ -74,7 +76,7 @@ nav, aside {
 }
 
 nav {
-  background-color: lightblue;
+  background-color: rgb(247, 235, 231);
 }
 
 aside {
@@ -90,4 +92,8 @@ aside {
 
 footer {
   flex: 0 0 20px; /*don't grow or shrink - just stay at a height of 90px. GrowShrinkBasis; GSB*/
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50%;
+
 }

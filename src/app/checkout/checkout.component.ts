@@ -65,6 +65,8 @@ export class CheckoutComponent {
     if (this.model.exp.length != 4) {
       this.ExpSubmissionRes = "Error: Credit card expiration must be written in MMYY format";
       this.submitted = false;
+    if (this.model.expz)
+    
     }
     if (this.submitted == true) {
       confirm ("Are you sure you want to submit?");

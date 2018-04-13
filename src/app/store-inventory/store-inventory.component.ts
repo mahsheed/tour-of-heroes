@@ -50,6 +50,12 @@ export class StoreInventoryComponent implements OnInit {
 
   
   shoppingPrice;
+  setShoppingPrice(newPrice) {
+    if (newPrice <= 0) {
+      newPrice = 0;
+    } //prevents -0 glitch
+    this.shoppingPrice = newPrice;
+  }
 
   removeItemFromCart(color) {
     console.log(color);
@@ -63,7 +69,7 @@ export class StoreInventoryComponent implements OnInit {
         this.blkbtnDisabled = false;
         this.blkBtnText = "Add to Basket";
       }
-      this.shoppingPrice = this.shoppingPrice - this.blkPrice;
+      this.setShoppingPrice(this.shoppingPrice - this.blkPrice);
     }
     if (color == 'green') {
       this.cartGrnQuantity--;
@@ -75,7 +81,7 @@ export class StoreInventoryComponent implements OnInit {
         this.grnbtnDisabled = false;
         this.grnBtnText = "Add to Basket";
       }
-      this.shoppingPrice = this.shoppingPrice - this.grnPrice;
+      this.setShoppingPrice(this.shoppingPrice - this.grnPrice);
     }
     if (color == 'purple') {
       this.cartPrpQuantity--;
@@ -87,7 +93,7 @@ export class StoreInventoryComponent implements OnInit {
         this.prpbtnDisabled = false;
         this.prpBtnText = "Add to Basket";
       }
-      this.shoppingPrice = this.shoppingPrice - this.prpPrice;
+      this.setShoppingPrice(this.shoppingPrice - this.prpPrice);
     }
     if (color == 'brown') {
       this.cartBrnQuantity--;
@@ -99,7 +105,7 @@ export class StoreInventoryComponent implements OnInit {
         this.brnbtnDisabled = false;
         this.brnBtnText = "Add to Basket";
       }
-      this.shoppingPrice = this.shoppingPrice - this.brnPrice;
+      this.setShoppingPrice(this.shoppingPrice - this.brnPrice);
     }
   }
   addItemToCart(color) {
@@ -114,7 +120,7 @@ export class StoreInventoryComponent implements OnInit {
       if (this.cartBlkQuantity > 0) {
         this.blkbtnDisabled2 = false;
       }
-      this.shoppingPrice = this.shoppingPrice + this.blkPrice;
+      this.setShoppingPrice(this.shoppingPrice + this.blkPrice);
     }
     else if (color == 'green') {
       this.grnQuantity = this.grnQuantity - 1;
@@ -126,7 +132,7 @@ export class StoreInventoryComponent implements OnInit {
       if (this.cartGrnQuantity > 0) {
         this.grnbtnDisabled2 = false;
       }
-      this.shoppingPrice = this.shoppingPrice + this.grnPrice;
+      this.setShoppingPrice(this.shoppingPrice + this.grnPrice);
     }
     else if (color == 'purple') {
       this.prpQuantity = this.prpQuantity - 1;
@@ -138,7 +144,7 @@ export class StoreInventoryComponent implements OnInit {
       if (this.cartPrpQuantity > 0) {
         this.prpbtnDisabled2 = false;
       }
-      this.shoppingPrice = this.shoppingPrice + this.prpPrice;
+      this.setShoppingPrice(this.shoppingPrice + this.prpPrice);
     }
     else if (color == 'brown') {
       this.brnQuantity = this.brnQuantity - 1;
@@ -150,7 +156,7 @@ export class StoreInventoryComponent implements OnInit {
       if (this.cartBrnQuantity > 0) {
         this.brnbtnDisabled2 = false;
       }
-      this.shoppingPrice = this.shoppingPrice + this.brnPrice;
+      this.setShoppingPrice(this.shoppingPrice + this.brnPrice);
     }
     console.log(this.shoppingPrice);
     }
