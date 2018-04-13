@@ -22,4 +22,11 @@ describe('StoreInventoryComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as title 'Store Inventory'`, async(() => {
+    const fixture = TestBed.createComponent(StoreInventoryComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('Store Inventory');
+  }));
+
 });

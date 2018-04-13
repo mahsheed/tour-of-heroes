@@ -12,7 +12,7 @@ export class StoreInventoryComponent implements OnInit {
   ngOnInit() {
     this.shoppingPrice = 0;
   }
-  title = 'Store Inventory1';
+  title = 'Store Inventory';
   count: number = 0;
   
   blkPrice = 1.22;

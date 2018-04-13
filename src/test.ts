@@ -15,6 +15,7 @@ getTestBed().initTestEnvironment(
   platformBrowserDynamicTesting()
 );
 // Then we find all the tests.
-const context = require.context('./', true, /app\.component\.spec\.ts$/);
+const context = require.context('./', true, /store-inventory\.component\.spec\.ts$/);
+//ts tells which file to execute; here did store inventory.
 // And load the modules.
 context.keys().map(context);
